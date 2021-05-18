@@ -113,10 +113,10 @@ Parameters used: {template}
 
 Models with higher accuracy scores were:
 {template}
-|Vectorizer|Classifier|Pipeline|Accuracy|
-|---|---|---|---|
-|CountVectorizer|RandomForestClassifier|CountVectorizer(max_features=200), DecisionTreeClassifier^(max_depth=11)|58.87%|
-|TfidfVectorizer|GradientBoostingClassifier|No pipeline|58.06%|
+|Classifier|Pipeline|Accuracy|
+|---|---|---|
+|RandomForestClassifier|CountVectorizer(max_features=200), DecisionTreeClassifier^(max_depth=11)|58.87%|
+|GradientBoostingClassifier|No pipeline|58.06%|
 
 ### Conclusions/Recommendations
 
