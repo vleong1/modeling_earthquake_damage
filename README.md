@@ -114,10 +114,12 @@ Parameters used: {template}
 ## Analysis
 
 Models with higher accuracy scores were:
-{template}
+
 |Classifier|Pipeline|Accuracy|
 |---|---|---|
-|RandomForestClassifier|CountVectorizer(max_features=200), DecisionTreeClassifier^(max_depth=11)|58.87%|
+|**Baseline Accuracy Score**|---|**56.74%**|
+|RandomForestClassifier|LabelEncoding(), StandardScaler()|68.87%|
+|ExtraTreesClassifier|LabelEncoding(), StandardScaler()|66.43%|
 |GradientBoostingClassifier|No pipeline|58.06%|
 
 ### Conclusions/Recommendations
