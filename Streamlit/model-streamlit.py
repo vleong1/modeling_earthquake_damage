@@ -21,7 +21,7 @@ train_enc
 earthquake_encoded = pd.merge(train_enc, train_labels, on = 'building_id')
 
 # set X + y
-X = earthquake_encoded.drop(columns = ['building_id', 'damage_grade'])
+X = earthquake_encoded[['age', 'count_families', 'foundation_type', 'roof_type', 'has_superstructure_mud_mortar_stone']]
 y = earthquake_encoded['damage_grade']
 
 # tts
@@ -35,7 +35,7 @@ X_train_scaled = sscaler.fit_transform(X_train)
 X_test_scaled = sscaler.transform(X_test)
 
 # estimator
-forest = RandomForestClassifier(max_depth = 11, max_features = 30)
+forest = RandomForestClassifier(max_depth = 4, max_features = 2)
 forest.fit(X_train_scaled, y_train)
 
 # save model
